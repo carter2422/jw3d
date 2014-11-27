@@ -2,13 +2,19 @@
 <html>
   <head>
     <title>JW3D</title>
-    <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}">;
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}">
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,300' rel='stylesheet' type='text/css'>
   </head>
   <body>
    
     <header>
       <div class="container">
         <!-- <h1 class="logo">JW3D</h1> -->
+          <strong><nav>
+          <ul class="menu">
+            <!-- <li><a href="{{ url_for('home') }}">Me</a></li> -->
+          </ul>
+        </nav></strong>
       </div>
     </header> 
      
@@ -16,6 +22,14 @@
       {% block content %}
       {% endblock %}
     </div>
-     
+
+    <footer>
+      <div class="container">
+        <hr>
+        <p>
+          This site powered by <a href="http://flask.pocoo.org">Flask</a> 
+        </p>
+      </div>
+
   </body>
 </html>
