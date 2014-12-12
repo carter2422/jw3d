@@ -13,7 +13,7 @@ body {
 }
 
 header {
-  opacity: .9;
+  opacity: 0.75;
 }
 
 footer {
@@ -31,6 +31,7 @@ footer p {
  
 .menu {
   text-align: right;
+  text-shadow: 0px 1px 0px #eee;
 }
  
 .menu li {
