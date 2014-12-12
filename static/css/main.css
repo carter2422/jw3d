@@ -5,8 +5,10 @@ body {
 }
  
  .container {
-  width: 666px;
+  width: 75%;
+  max-width: 666px;
   margin: 0px auto;
+  overflow: auto;
   /*border: 2px solid red;*/
 }
 
@@ -15,12 +17,11 @@ header {
 }
 
 footer {
-  margin: 2em;
+  margin: 1.5em;
 }
 
 footer .container {
   border-top: 1px solid #555;
-  margin-top: 150px;
   opacity: 0.5;
 }
 
@@ -69,5 +70,8 @@ a:hover {
 img {
   float: left;
   padding-right: 1.5em;
+/*  margin-bottom: 1.5em;
+  max-width: 100%;
+  max-width: 100%;*/
 }
 
