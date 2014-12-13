@@ -3,8 +3,8 @@ from flask import Flask, render_template, request
 import stripe
 
 stripe_keys = {
-	'secret_key': Oqu2VTvOtbqkwNZgcXAjJZ72myxVOrCh,
-	'publishable_key': pk_X0j7NxbfNHQLwcVf6V5Q9UfJGvmia
+    'secret_key': os.environ['SECRET_KEY'],
+    'publishable_key': os.environ['PUBLISHABLE_KEY']
 }
 
 stripe.api_key = stripe_keys['secret_key']
