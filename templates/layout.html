@@ -1,10 +1,21 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>JW3D</title>
+    <title>{% block title %}{% endblock %} - JW3D</title>
     <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}">
     <link href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,300' rel='stylesheet' type='text/css'>
+    <style type="text/css" media="screen">
+      form article label {
+        display: block;
+        margin: 5px;
+      }
+
+      form .submit {
+        margin: 15px 0;
+      }
+    </style>
   </head>
+  
   <body>
    
     <header>
@@ -13,6 +24,7 @@
           <strong><nav>
           <ul class="menu">
             <li><a href="{{ url_for('home') }}">Me</a></li>
+            <li><a href="{{ url_for('tools') }}">Tools</a></li>
             <li><a href="{{ url_for('signup') }}">Signup</a></li>
           </ul>
         </nav></strong>
@@ -24,12 +36,14 @@
       {% endblock %}
     </div>
 
+    {% block footer %}
     <footer>
       <div class="container">
         <p>
           This site powered by <a href="http://flask.pocoo.org">Flask</a> 
         </p>
       </div>
-
+    </footer>
+    {% endblock %}
   </body>
 </html>

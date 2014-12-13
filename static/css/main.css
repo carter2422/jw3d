@@ -50,7 +50,7 @@ h2 {
 h3 {
   font-size: 1.7em;
   font-weight: 100;
-  text-align: center;
+  text-align: left;
   color: #848F87;
 }
 
@@ -71,8 +71,14 @@ a:hover {
 img {
   float: left;
   padding-right: 1.5em;
-/*  margin-bottom: 1.5em;
-  max-width: 100%;
-  max-width: 100%;*/
+  /*max-width: 90%; */
 }
 
+img.center {
+  max-width: 90%;
+  float: center;
+}
+
+form {
+  text-align: center;
+}

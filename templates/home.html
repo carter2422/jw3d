@@ -1,18 +1,19 @@
 {% extends "layout.html" %}
+
+{% block title %}Jonathan{% endblock title %}
+
 {% block content %}
-
-<h2>Jonathan Williamson</h2>
-<h3>topology specialist, tool designer, aspiring python dev</h3>
-<div>
-	<img src="{{ url_for('static', filename='img/jonathan_bio_250x250_bw.png') }}" alt="Jonathan Williamson">
+  <h2>Jonathan Williamson</h2>
+  <h3>topology specialist, tool designer, aspiring python dev</h3>
   <div>
-  	<p>
-      I'm a fan of clean and effective mesh topology for 3D modeling. I really enjoy designing artist-friendly tools, such as my <a href="http://cgcookiemarkets.com/blender/all-products/contours-polystrips-retopology-bundle/">RetopoFlow toolset</a> for Blender. Homebrewing beer is quickly becoming a favorite past time, and I'm the co-founder of <a href="http://cgcookie.com">CG Cookie</a>.
-	 </p>
-    <p>
-      You can find me on <a href="https://twitter.com/carter2422">Twitter</a>, <a href="https://github.com/carter2422">Github</a>, and <a href="http://cgcookie.com/profile/jonathanwilliamson/">CG Cookie</a>.
-    </p>
+  	<img src="{{ url_for('static', filename='img/jonathan_bio_250x250_bw.png') }}" alt="Jonathan Williamson">
+    <div>
+    	<p>
+        I'm a fan of clean and effective mesh topology for 3D modeling. I really enjoy designing artist-friendly tools, such as my <a href="http://cgcookiemarkets.com/blender/all-products/contours-polystrips-retopology-bundle/">RetopoFlow toolset</a> for Blender. Homebrewing beer is quickly becoming a favorite past time, and I'm the co-founder of <a href="http://cgcookie.com">CG Cookie</a>.
+      </p>
+      <p>
+        You can find me on <a href="https://twitter.com/carter2422">Twitter</a>, <a href="https://github.com/carter2422">Github</a>, and <a href="http://cgcookie.com/profile/jonathanwilliamson/">CG Cookie</a>.
+      </p>
+    </div>
   </div>
-</div>
-
-{% endblock %}
+{% endblock content %}

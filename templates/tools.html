@@ -1,0 +1,40 @@
+{% extends "tools_layout.html" %}
+
+
+{% block content %}
+	<h2>Tools</h2>
+	<div>
+		<p>
+	    	These are the tools I've built and use in my day-to-day workflow in Blender.
+	 	</p>
+	</div>
+
+	<h3>Quick Tools</h3>
+	<div>
+		<p>
+	    	Quick Tools is an add-on for Blender that provides a series of macros and custom operators to enhance your workflow. It works by expediting many small tasks that become quite repetitive.
+	 	</p>
+ 		<img class="center" src="{{ url_for('static', filename='img/tools/blender_quicktools.png') }}" alt="Quick Tools">
+	 	<p>
+	 		The add-on is available, free, under a GPL v2 license on <a href="https://github.com/CGCookie/quicktools">Github</a>. You are under no obligation to purchase it, but I appreciate your support. All procedes go back into developing the tools further.
+	 	</p>
+	 	<p>
+	 		Learn how to use Quick Tools via <a href="http://cgcookie.com/blender/2013/05/14/using-the-quick-tools-add-on/">my tutorial on CG Cookie</a>.
+	 	<!-- Stripe purchase button -->
+	 	<form action="/charge" method="post">
+	    <article>
+	      <label>
+	        <span><strong>Cost: $5.00</strong></span>
+	      </label>
+	    </article>
+	    <script src="https://checkout.stripe.com/checkout.js" class="stripe-button"
+	            data-key="{{ key }}"
+	            data-description="Quick Tools"
+	            data-amount="500"></script>
+	  	</form>
+	</div>
+{% endblock content %}
+
+<!-- Why you no work? -->
+{% block tools %}
+{% endblock tools %}
