@@ -30,6 +30,7 @@ def charge():
     # Amount in cents
     amount = 500
 
+    # Need to check if the inputted email exists. How to retreive by email?
     existing_customer = stripe.Customer.retrieve('cus_5QOfskKQ1bn2H9')
 
     if existing_customer:
