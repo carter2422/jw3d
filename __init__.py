@@ -24,21 +24,35 @@ def signup():
 	return render_template('signup.html')
 
 @app.route('/charge', methods=['POST'])
+
+
 def charge():
     # Amount in cents
     amount = 500
 
-    customer = stripe.Customer.create(
-        email=request.form['stripeEmail'],
-        card=request.form['stripeToken']
-    )
+    existing_customer = stripe.Customer.retrieve('cus_5QOfskKQ1bn2H9')
 
-    charge = stripe.Charge.create(
-        customer=customer.id,
+    if existing_customer:
+        charge = stripe.Charge.create(
+        customer=existing_customer.id,
         amount=amount,
         currency='usd',
         description='Flask Charge'
     )
+
+    else:
+
+        customer = stripe.Customer.create(
+            email=request.form['stripeEmail'],
+            card=request.form['stripeToken']
+        )
+
+        charge = stripe.Charge.create(
+            customer=customer.id,
+            amount=amount,
+            currency='usd',
+            description='Flask Charge'
+        )
 
     return render_template('charge.html', amount=amount)
 
