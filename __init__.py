@@ -9,19 +9,24 @@ stripe_keys = {
 
 stripe.api_key = stripe_keys['secret_key']
 
-app = Flask(__name__)      
- 
+
+app = Flask(__name__)
+
+
 @app.route('/')
 def home():
     return render_template('home.html')
+
 
 @app.route('/tools')
 def tools():
     return render_template('tools.html', key=stripe_keys['publishable_key'])
 
+
 @app.route('/signup')
 def signup():
     return render_template('signup.html')
+
 
 @app.route('/charge', methods=['POST'])
 def charge():
