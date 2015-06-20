@@ -13,15 +13,15 @@ app = Flask(__name__)
  
 @app.route('/')
 def home():
-	return render_template('home.html')
+    return render_template('home.html')
 
 @app.route('/tools')
 def tools():
-	return render_template('tools.html', key=stripe_keys['publishable_key'])
+    return render_template('tools.html', key=stripe_keys['publishable_key'])
 
 @app.route('/signup')
 def signup():
-	return render_template('signup.html')
+    return render_template('signup.html')
 
 @app.route('/charge', methods=['POST'])
 def charge():
